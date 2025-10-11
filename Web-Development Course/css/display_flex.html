@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        .container{
+            background-color: lightgreen;
+            height: 150px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;           
+        }
+        
+        .box{
+            background-color: coral;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .top{
+            align-self: flex-start;
+        }
+
+        .middle{
+            align-self: center;
+        }
+
+        .bottom{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box top">One</div>
+        <div class="box middle">Two</div>
+        <div class="box bottom">Three</div>
+        <div class="box top">One</div>
+        <div class="box middle">Two</div>
+        <div class="box bottom">Three</div>
+    </div>
+</body>
+</html>

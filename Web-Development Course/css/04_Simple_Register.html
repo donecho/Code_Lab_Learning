@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+
+        .content{
+            background-color: white;
+            width: 400px;
+            margin: auto;
+             margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .title{
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            font-size: 25px;
+            font-weight: bold;  
+        }
+
+        label {
+            display: block;
+             margin-left: 20px;
+             margin-top: 5px;
+             margin-bottom: 5px;
+        }
+        
+        input[type="text"], input[type="email"], input[type="password"]{
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding: 3px 15px;
+            margin: 5px 20px;
+        }
+
+        .checkbox-group{
+            margin: 0px 20px;
+            margin-top: 20px;
+        }
+
+        .checkbox-group span{
+            color: blue;
+            cursor: pointer;
+        }
+
+        .button-group{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-btn{
+            width:89%;
+            margin: 0px 20px;
+            background-color: cadetblue;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin:5px 0px;
+        }
+
+        .footer-text{
+            text-align: center;
+            margin: 20px 0px;
+            padding-bottom: 20px;
+        }
+
+        .register-btn:focus{
+            background-color: rgb(33, 150, 243);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="title">Sign Up</div>
+        <div class="input-group">
+            <label for="">Username:</label>
+            <input type="text">
+        </div>
+         <div class="input-group">
+            <label for="">Email:</label>
+            <input type="email">
+        </div>
+         <div class="input-group">
+            <label for="">Password:</label>
+            <input type="password">
+        </div>
+         <div class="input-group">
+            <label for="">Password Again:</label>
+            <input type="password">
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox"> I agree with therm of service <span>term of Service</span>
+        </div>
+        <div class="button-group">
+            <button class="register-btn">Register</button>
+        </div>
+
+        <div class="footer-text">
+            Already a member ? <span>Login In here</span>
+        </div>
+    </div>
+
+</body>
+</html>

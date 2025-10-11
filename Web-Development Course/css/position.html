@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .one{
+            width:100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            top: 50px;
+           
+        }
+         .two{
+            width:200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+        }
+         .three{
+            width:300px;
+            height: 300px;
+            background-color: green;
+            position: fixed;
+            left: 100px;
+        }
+
+        .four{
+            width:100%;
+            height: 100px;
+            background-color: yellow;
+            position: sticky;
+            top: 0;
+        }
+
+        .five{
+            width:400px;
+            height: 400px;
+            background-color: orange;
+            position: absolute;
+            top: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: relative;
+           
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+
+    <div class="five"><div class="item"></div></div>
+
+
+</body>
+</html>

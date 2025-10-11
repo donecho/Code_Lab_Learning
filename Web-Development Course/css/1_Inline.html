@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css</title>
+    <style>
+        #internal{
+            color: aqua;
+        }
+
+        h1{
+            color: red;
+        }
+
+        body{
+            background-color: white;
+            opacity: 0.9;
+        }
+
+        #h2border{
+            color: gold;
+           /* border-width: 5px 10px;
+            border-style: dotted;
+            border-color: aqua; */
+            border: 10px dotted red;
+        }
+
+        .para1{
+            background-color: gray;
+            border: 1px solid black;
+            margin: 40px 20px;
+            text-align: center;
+        }
+          .para2{
+            background-color: gray;
+            border: 1px solid black;
+            padding: 40px;
+            text-align: center;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./external.css">
+</head>
+<body>
+    <h2 style="color: red;">Inline Style</h2>
+    <h2 id="internal">Internal Style</h2>
+    <h2 id="external">External Style</h2>
+    <hr>
+    
+    <h1>Hi</h1>
+
+    <h2 id="h2border">Border</h2>
+    <hr>
+
+    <h2>Margin, Padding</h2>
+    <div class="para1">Hello</div>
+    <div class="para2">Hello</div>
+</body>
+</html>

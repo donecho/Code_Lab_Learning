@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_Input Attribute</title>
+
+    <style>
+        section{
+            height: 50vh;
+        }
+
+        #one{
+            background-color: aqua;
+        }
+
+        #two{
+            background-color: chartreuse;
+        }
+
+        #three{
+            background-color: aquamarine;
+        }
+
+        #four{
+            background-color: rebeccapurple;
+        }
+    </style>
+
+</head>
+<body style="height: 1000pc;">
+    <h3>This is heading (<h> tag)</h3>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr>
+    <h3>This is paragraph</h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium, praesentium eum optio voluptate ipsam voluptatibus expedita eveniet magnam rerum. Accusantium error ab consectetur saepe alias vitae quod, voluptates odit?</p>
+
+    <hr>
+    <h3>This is pre tag</h3>
+    <pre>function()
+        something
+    </pre>
+    <hr>
+
+    <h3>This is Div & Span</h3>
+
+    <div style="background-color: green; height: 100px; width: 100px;">This is Div</div>
+    <span style="background-color: aqua; height: 100px; height: 100px;">Thi is span</span>
+    <hr>
+
+    <form action="">
+        <label for="userName">Phone</label>
+        <input type="text" id="phoneNumber" class="" placeholder="09----------"> <br>
+
+        <label for="">User Name</label>
+        <input type="text" name="" id=""> <br>
+
+        <input type="button" value="Button"> <br>
+        <button>Button Tag</button> <br>
+
+        <label for="">Time</label> 
+        <input type="time"> <br>
+
+        <label for="">Date & Time <i class="fas fa-times-circle    "></i></label>
+        <input type="datetime-local"> <br>
+
+        <label for="">File</label>
+        <input type="file" name="" id=""> <br>
+
+        <label for="">Hidden</label>
+        <input type="hidden" name=""> <br>
+
+        <h4>Checkbox</h4>
+        <h5>Choose Language</h5>
+        <input type="checkbox" name="" id=""> Japan
+        <input type="checkbox" name="" id=""> Myanmar
+        <input type="checkbox" name="" id=""> Korea
+        <br>
+
+        <h5>Choose Gender</h5>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female <br>
+
+        <label for="">Range</label>
+        <input type="range" name="" id="" min="0" max="10" value="5"> <br>
+
+        <label for=""> Search </label>
+        <input type="search" name="" id=""> <br>
+
+        <hr>
+
+        <h3>Select Tag</h3>
+
+        <form action="">
+            <select name="" id="">
+                <option value="empty">Choose Fruit</option>
+                <option value="A">Apple</option>
+                <option value="M" selected>Mango</option>
+                <option value="B">Banana</option>
+            </select> <br>
+
+            <h3>TextArea</h3>
+
+            <textarea name="" id="" rows="5" cols="50" placeholder="something"></textarea> <br>
+
+            <h3>Fieldset</h3>
+
+            <fieldset style="width: 300px; background-color: aqua;">
+                <legend style="background-color: blueviolet;">My Information</legend>
+                <form action="">
+                    <div>
+                        <label for="myName">Name</label>
+                        <input type="text" name="" id="myName" placeholder="Enter Name ....">
+                    </div>
+                    <div>
+                        <label for="myName">Name</label>
+                        <input type="text" name="" id="myName" placeholder="Enter Name ....">
+                    </div>
+                    <div>
+                        <label for="myName">Name</label>
+                        <input type="text" name="" id="myName" placeholder="Enter Name ....">
+                    </div>
+                </form>
+            </fieldset>
+        </form>
+
+        <hr>
+        
+        <h3>Data List</h3>
+        <input type="text" list="mylist">
+        <datalist id="mylist">
+            <option value="a">Apple</option>
+            <option value="m">Mango</option>
+            <option value="b">Banana</option>
+        </datalist> <br>
+
+        <h3>opt group</h3>
+        <select name="" id="">
+            <optgroup label="fruit">
+                <option value="a">Apple</option>
+                <option value="m">Mango</option>
+                <option value="b">Banana</option>
+            </optgroup>
+             <optgroup label="Accessory">
+                <option value="b">Book</option>
+                <option value="p">Pen</option>
+                <option value="p">pencil</option>
+            </optgroup>
+        </select>
+
+        <hr>
+
+           <h3>Order List, Unorder, List</h3>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+        <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ol> <br>
+        <hr>
+
+        <h3>Image Test</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-LXcIpnwTqE7ELd34csY9i1XAqXewDhuuQ&s" alt="">
+
+        <br>
+
+        <img src="../image/cat.png" alt="">
+
+        <hr>
+
+        <h3>Table</h3>
+        <table border="1px">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Email</td>
+            </tr>
+             <tr>
+                <td>1</td>
+                <td colspan="2">zin@gmail.com</td>
+            </tr>
+             <tr>
+                <td>2</td>
+                <td rowspan="2">Phyo</td>
+                <td>phyo@gmail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+               
+                <td>thant@gmail.com</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h3>Atag _ Link </h3>
+
+        <a href="https://www.youtube.com/watch?v=K68q7K9h384" target="_blank">Youtube</a> 
+
+        <a href="../image/cat.png" target="_parent">Go to Cat Photo</a> <br>
+ 
+        <h4>Link Page</h4>
+
+        <section id="one">One</section>
+        <section id="two">Two</section>
+        <section id="three">Three</section>
+        <section id="four">Four</section>
+
+        <h3>sub sup</h3>
+        <p>H <sub>2</sub>O <sup>2</sup></p>
+
+        <h3>Del</h3>
+        <p><del>$4000</del>$5000</p>
+
+        <h3>iframe</h3>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488798.9969480859!2d96.18157255000001!3d16.839142450000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1949e223e196b%3A0x56fbd271f8080bb4!2sYangon!5e0!3m2!1sen!2smm!4v1758777800779!5m2!1sen!2smm" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <hr> 
+
+        <details>
+            <summary>Testing Paragraph</summary>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, esse nobis excepturi porro nemo, rem iste exercitationem aliquam quod laborum sequi quaerat ipsum dolorem earum, tempore perferendis delectus accusantium magni.</p>
+        </details>
+
+<hr>
+
+<h2>Block Level Element</h2>
+
+<div style="background-color: aqua;">One</div>
+<div style="background-color: blue;">Two</div>
+
+<h2>Inline Level Element</h2>
+        <span style="background-color: rgb(105, 171, 171);">Three</span>
+        <span style="background-color: rgb(200, 255, 0);">Four</span>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+         
+    </form>
+</body>
+</html>

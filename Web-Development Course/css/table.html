@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           text-align: center;
+        }
+
+        .table{
+            width: 80%;
+        }
+
+        .table thead{
+            color: white;
+            background-color: turquoise;
+        }
+
+        .table, th, td{
+            border-collapse: collapse;
+            padding: 10px 15px;
+        }
+
+        .table tbody tr:nth-child(even){
+            background-color: lightgray;
+        }
+
+        .table tbody tr:hover{
+            background-color: lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Zin</td>
+                    <td>zin@gmail.com</td>
+                    <td>Male</td>
+                </tr>
+                 <tr>
+                    <td>2</td>
+                    <td>Phyo</td>
+                    <td>phyo@gmail.com</td>
+                    <td>Female</td>
+                </tr>
+                 <tr>
+                    <td>3</td>
+                    <td>Thant</td>
+                    <td>thant@gmail.com</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
