@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log("Hi There");
+
+    // Function to create a simple star pyramid
+    function createStarPyramid(rows) {
+        let pyramid = '';
+        for (let i = 1; i <= rows; i++) {
+            // Add spaces for centering
+            pyramid += ' '.repeat(rows - i);
+            // Add stars
+            pyramid += '*'.repeat(2 * i - 1);
+            // Add new line
+            pyramid += '\n';
+        }
+        return pyramid;
+    }
+
+    // Function to create an inverted star pyramid
+    function createInvertedStarPyramid(rows) {
+        let pyramid = '';
+        for (let i = rows; i >= 1; i--) {
+            // Add spaces for centering
+            pyramid += ' '.repeat(rows - i);
+            // Add stars
+            pyramid += '*'.repeat(2 * i - 1);
+            // Add new line
+            pyramid += '\n';
+        }
+        return pyramid;
+    }
+
+    // Function to create a diamond star pattern
+    function createStarDiamond(rows) {
+        let diamond = '';
+    
+        // Upper part
+        for (let i = 1; i <= rows; i++) {
+            diamond += ' '.repeat(rows - i);
+            diamond += '*'.repeat(2 * i - 1);
+            diamond += '\n';
+        }
+    
+        // Lower part
+        for (let i = rows - 1; i >= 1; i--) {
+            diamond += ' '.repeat(rows - i);
+            diamond += '*'.repeat(2 * i - 1);
+            diamond += '\n';
+        }
+    
+        return diamond;
+    }
+
+    // Function to create a hollow star pyramid
+    function createHollowStarPyramid(rows) {
+        let pyramid = '';
+    
+        for (let i = 1; i <= rows; i++) {
+            pyramid += ' '.repeat(rows - i);
+        
+            if (i === 1) {
+                // First row - single star
+                pyramid += '*';
+            } else if (i === rows) {
+                // Last row - all stars
+                pyramid += '*'.repeat(2 * i - 1);
+            } else {
+                // Middle rows - stars at edges only
+                pyramid += '*' + ' '.repeat(2 * i - 3) + '*';
+            }
+        
+            pyramid += '\n';
+        }
+    
+        return pyramid;
+    }
+
+    // Function to create a right-aligned star pyramid
+    function createRightStarPyramid(rows) {
+        let pyramid = '';
+        for (let i = 1; i <= rows; i++) {
+            pyramid += '*'.repeat(i);
+            pyramid += '\n';
+        }
+        return pyramid;
+    }
+
+    // Function to display pyramid in console
+    function displayPyramid(type, rows) {
+        console.log(`\n${type} Star Pyramid (${rows} rows):`);
+        console.log('=' .repeat(30));
+    
+        let pyramid;
+        switch(type) {
+            case 'normal':
+                pyramid = createStarPyramid(rows);
+                break;
+            case 'inverted':
+                pyramid = createInvertedStarPyramid(rows);
+                break;
+            case 'diamond':
+                pyramid = createStarDiamond(rows);
+                break;
+            case 'hollow':
+                pyramid = createHollowStarPyramid(rows);
+                break;
+            case 'right':
+                pyramid = createRightStarPyramid(rows);
+                break;
+            default:
+                pyramid = createStarPyramid(rows);
+        }
+    
+        console.log(pyramid);
+    }
+
+    // Function to create pyramid and return as string (for HTML display)
+    function getPyramidHTML(type, rows) {
+        let pyramid;
+        switch(type) {
+            case 'normal':
+                pyramid = createStarPyramid(rows);
+                break;
+            case 'inverted':
+                pyramid = createInvertedStarPyramid(rows);
+                break;
+            case 'diamond':
+                pyramid = createStarDiamond(rows);
+                break;
+            case 'hollow':
+                pyramid = createHollowStarPyramid(rows);
+                break;
+            case 'right':
+                pyramid = createRightStarPyramid(rows);
+                break;
+            default:
+                pyramid = createStarPyramid(rows);
+        }
+    
+        // Convert to HTML with <br> tags
+        return pyramid.replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
+    }
+
+    // Example usage and demonstration
+    function demonstrateAllPyramids() {
+        const rows = 5;
+    
+        // Display all types in console
+        displayPyramid('normal', rows);
+        displayPyramid('inverted', rows);
+        displayPyramid('diamond', Math.ceil(rows/2));
+        displayPyramid('hollow', rows);
+        displayPyramid('right', rows);
+    
+        // For web display
+        console.log('\nHTML formatted pyramid:');
+        console.log(getPyramidHTML('normal', rows));
+    }
+
+    // Interactive version for browser
+    function createInteractivePyramid() {
+        // Create container
+        const container = document.createElement('div');
+        container.style.fontFamily = 'monospace';
+        container.style.textAlign = 'center';
+        container.style.lineHeight = '1.2';
+        container.style.fontSize = '18px';
+        container.style.margin = '20px';
+        container.style.padding = '20px';
+        container.style.backgroundColor = '#f0f0f0';
+        container.style.borderRadius = '10px';
+    
+        // Create input
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.min = '1';
+        input.max = '15';
+        input.value = '5';
+        input.style.margin = '10px';
+        input.style.padding = '5px';
+    
+        // Create select for pyramid type
+        const select = document.createElement('select');
+        select.innerHTML = `
+            <option value="normal">Normal Pyramid</option>
+            <option value="inverted">Inverted Pyramid</option>
+            <option value="diamond">Diamond</option>
+            <option value="hollow">Hollow Pyramid</option>
+            <option value="right">Right Pyramid</option>
+        `;
+        select.style.margin = '10px';
+        select.style.padding = '5px';
+    
+        // Create button
+        const button = document.createElement('button');
+        button.textContent = 'Generate Pyramid';
+        button.style.margin = '10px';
+        button.style.padding = '8px 15px';
+        button.style.backgroundColor = '#4CAF50';
+        button.style.color = 'white';
+        button.style.border = 'none';
+        button.style.borderRadius = '5px';
+        button.style.cursor = 'pointer';
+    
+        // Create output div
+        const output = document.createElement('div');
+        output.style.marginTop = '20px';
+        output.style.padding = '10px';
+        output.style.backgroundColor = 'white';
+        output.style.borderRadius = '5px';
+        output.style.minHeight = '200px';
+    
+        // Add elements to container
+        container.appendChild(document.createElement('p').textContent = 'Star Pyramid Generator');
+        container.appendChild(input);
+        container.appendChild(select);
+        container.appendChild(button);
+        container.appendChild(output);
+    
+        // Add event listener
+        button.addEventListener('click', function() {
+            const rows = parseInt(input.value) || 5;
+            const type = select.value;
+            output.innerHTML = getPyramidHTML(type, rows);
+        });
+    
+        // Generate initial pyramid
+        output.innerHTML = getPyramidHTML('normal', 5);
+    
+        // Add to document
+        document.body.appendChild(container);
+    }
+
+    // Run demonstration
+    demonstrateAllPyramids();
+
+    // Uncomment the line below to create interactive version in browser
+    // createInteractivePyramid();
+    
+
+
+    
+</script>
+</html>

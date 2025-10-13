@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    DOM 
+    <hr>
+
+    <p id="upTitle" class="downTitle" >Code Lab</p>
+    <p class="title">Class</p>
+
+
+</body>
+<script>
+    let element = document.getElementById("upTitle"); // element
+    let element1 = document.getElementsByClassName("downTitle"); // collection array
+    let element2 = document.getElementsByTagName("p"); // collection array 
+    let element3 = document.querySelector("p.title"); // element 
+    let element4 = document.querySelectorAll("p"); // NodeList
+
+    // element.innerHTML = "sss"
+    console.log(element.innerText);
+
+    
+    
+</script>
+</html>

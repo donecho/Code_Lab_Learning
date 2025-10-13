@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+</head>
+<body>
+    <h5 id="title">DOM</h5>
+    <hr>
+
+
+    <form action="" method="">
+
+        Email : <input type="email"  id="email"> <br>
+        Password : <input type="password"  id="password"> <br>
+    
+        <button onclick="login()" type="submit">Login</button>
+        <button onclick="register()" type="button">Register</button>
+        <button onclick="reset()" type="reset">Clear</button>
+
+    </form>
+
+    <br>
+
+    
+    <button onclick="show()">Click to show photo</button>
+
+    <br><br>
+
+    <button onclick=" create() ">Create Element</button>
+
+    <div id="newNode"><h1>Hello</h1></div>
+    <!-- <img style="width: 300px;" src="https://motoringworld.in/wp-content/uploads/2021/12/Honda-CBR650R-web.jpg"  id="image"> -->
+
+    <h1> Hello </h1> 
+    <h1></h1>
+    Hello 
+    
+</body>
+<script>
+
+    // calculator 2 
+    // api fetching || data searching
+
+    //  <h1> Hello World </h1>
+    function create(){
+        let node = document.createElement("h1") ; // <h1></h1>
+        let textNode = document.createTextNode("Hello World"); // Hello World 
+        node.appendChild(textNode); //  <h1 style="color:red" id="newNode"> Hello World </h1>
+        node.style.color = "red"
+        node.id = "newNode"
+
+        document.getElementById("newNode").appendChild(node)
+
+        let imgNode = document.createElement("img"); // <img >
+        imgNode.src = "https://motoringworld.in/wp-content/uploads/2021/12/Honda-CBR650R-web.jpg" // < img src=""
+        imgNode.style.width = "300px"
+        imgNode.id = "newImageUpload"
+        imgNode.class = "newImageUpload"
+
+        document.getElementById("newNode").appendChild(imgNode)
+
+        // document.getElementById("image").src = "https://motoringworld.in/wp-content/uploads/2021/12/Honda-CBR650R-web.jpg"
+
+    }
+
+    function show(){
+        document.getElementById("title").style.color = "red"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // 3 types of button => button | submit | reset
+
+    // http://127.0.0.1:5500/Day7/dom.html? => Request | Response 
+
+    let email = document.getElementById("email")
+    let password = document.getElementById("password")
+
+    function login(){
+        console.log("login");
+    }
+
+    function register(){
+        console.log("register");
+    }
+
+    function reset(){
+        console.log("reset");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let email = document.getElementById("email")
+    // let password = document.getElementById("password")
+    // let loginBtn = document.getElementById("btn_login")
+
+    // email.addEventListener( 'keyup' , function(){
+    //     console.log( email.value );
+    // } );
+
+    // loginBtn.addEventListener( 'dblclick' , function(){
+    //     console.log( email.value , password.value );
+    // } );
+
+    // function clearFun(element){
+    //     element.innerHTML = "clear all data"
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let userData = document.getElementById("userData")
+
+    // console.log( userData.value ); // getter 
+
+    // userData.value = "Code Lab Class" // setting
+
+    // // innerHTML innetText 
+
+    // let element = document.getElementById("upTitle"); // element
+    // let element1 = document.getElementsByClassName("downTitle"); // collection array
+    // let element2 = document.getElementsByTagName("p"); // collection array 
+    // let element3 = document.querySelector("p.title"); // element 
+    // let element4 = document.querySelectorAll("p"); // NodeList
+
+    // get 
+
+    // console.log( element.innerText );
+
+    // set
+
+    // element.innerText = "<h1>JavaScript</h1>"
+
+    
+    
+</script>
+</html>

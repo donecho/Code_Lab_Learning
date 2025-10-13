@@ -1,0 +1,90 @@
+Full Stack
+
+Fronet end + Backend + Database + API (option) + Server Deployment
+
+Laravel + Vue
+Mean Stack => Mongo Express React Node
+Mean Stack => Mongo Express React  Angular Node
+CRUD Create Read Update Delete
+
+1. Goals
+2. Avoid Copy Paste
+3. Demand -> each country
+=**********==**********==**********=
+
+Website Vs Web Applicatin
+
+=**********==**********==**********=
+
+Client-Side Rendering (CSR) , No Database , API 
+Server-Side Rendering (SSR) , Database with server site
+=**********==**********==**********=
+
+.CRUD 
+.Login Logout (Simple, Github, Google)
+.DB relation
+.Search
+.File storage
+.Comment, Rating, Review, Cart, Payment
+.Securioty
+.Storck management
+=**********==**********==**********=
+
+What is JavaScript 
+-Jabascript based frameworks like jQuery, Node.JS .etc.
+
+JavsScript vs TypeScript 
+TypeScript is a superset of Js.
+
+=**********==**********==**********=
+
+1. Browser ()
+2. Editor ()
+Extension 
+- Error Lens
+-JavaScript (ES6) Cpde Snippets
+-npm Intellisense
+=**********==**********==**********=
+
+Connection For Js 
+.Internal Js | script tag
+.External Js 
+=**********==**********==**********=
+
+Three Placement for js 
+1.In head tag ()
+2.In Body tag 
+3.Below Body tag 
+
+.let 
+.var 
+.const 
+
+typeof ->to check data type
+Data Type 
+
+//String 
+let userName = "Zin" 
+let num = 1;
+
+
+=**********==**********==**********=
+console.log(""); //For Output
+=**********==**********==**********=
+
+Day 2 ***JavaScript Operators and Variable Declaration ***
+
+Variable Declaration 
+There are three keywords -
+.Let 
+.Var 
+.Const 
+Var and let can be assign 
+But Const not!
+-----
+How we declare Variable Name?
+.Must start with A-Z, a-z,_(don't start with digits)
+.Meaning must be meaningful
+.Don't same with keywords and others variable name 
+.Start with small letters and not put space between them 
+.Don't start with symbols but you can use _ (underscore) instead of them
