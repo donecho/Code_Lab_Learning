@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #productTable {
+          border-collapse: collapse;
+          width: 70%;
+          margin: auto;
+        }
+  
+        #productTable td,
+        #productTable th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+  
+        #productTable tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+  
+        #productTable tr:hover {
+          background-color: #ddd;
+        }
+  
+        #productTable th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: black;
+          color: white;
+        }
+
+      .searchConent{
+        display: flex;
+        justify-content: center;
+      }
+
+      .searchBox{
+        width: 300px;
+        padding: 15px 10px;
+        margin: 30px;
+      }
+
+      </style>
+
+</head>
+<body>
+    <div class="searchConent">
+      <input type="text" class="searchBox" id="searchKey" placeholder="Enter search data..." onkeyup="searchProccess()">
+    </div>
+    <table id="productTable">
+
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Photo</th>
+        </tr>
+
+    </table>
+</body>
+<script>
+    
+
+    let dataFetching = async () => {
+        let temp = ""
+        let response = await fetch("https://fakestoreapi.com/products")
+        let products = await response.json()
+
+        products.forEach(item => {
+              temp += `
+                <tr>
+                  <td>${item.id}</td>
+                  <td>${item.title}</td>
+                  <td>${item.description}</td>
+                  <td><img src="${item.image}" width="50px"></td>
+                </tr>
+                `
+            });
+
+            document.getElementById("productTable").innerHTML =   `
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Photo</th>
+              </tr> ${temp}
+              `
+    }
+
+    dataFetching();
+
+    function searchProccess(){
+        let input = document.getElementById("searchKey")
+        let filter = input.value.toUpperCase() // search string
+        let table = document.getElementById('productTable')
+        let tr = table.getElementsByTagName("tr") 
+
+        let txtValue ;
+
+        for(let i=0 ; i < tr.length ; i++){ // each table role 
+            td = tr[i].getElementsByTagName("td")[1] // table role columns fields | name field
+
+            if(td){
+              txtValue = td.innerHTML // each name field string
+
+              // true = 0 | 1 ||| false = -1
+              if(txtValue.toUpperCase().indexOf(filter) > -1){
+                tr[i].style.display = ""
+              }else{
+                // not found condtion
+                tr[i].style.display = "none"
+              }
+
+            }
+        }
+    }
+
+    // try{
+
+    //     let temp = "";
+    //     fetch("https://fakestoreapi.com/products")
+    //     .then( (res) => res.json() )
+    //     .then( (products) => {
+    //         // console.log(products);
+
+    //         products.forEach(item => {
+    //           temp += `
+    //             <tr>
+    //               <td>${item.id}</td>
+    //               <td>${item.title}</td>
+    //               <td>${item.description}</td>
+    //               <td><img src="${item.image}" width="50px"></td>
+    //             </tr>
+    //             `
+    //         });
+
+    //         document.getElementById("productTable").innerHTML =   `
+    //         <tr>
+    //           <th>ID</th>
+    //           <th>Name</th>
+    //           <th>Description</th>
+    //           <th>Photo</th>
+    //         </tr> ${temp}
+    //         `
+    //     } )
+    // }catch(e){
+    //     console.log("error => " + e);
+    // }
+
+</script>
+</html>

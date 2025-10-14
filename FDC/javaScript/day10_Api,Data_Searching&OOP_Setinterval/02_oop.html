@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    OOP
+</body>
+<script>
+
+    class Person{
+        constructor(name,job){
+            this.name = name ;
+            this.job = job;
+        }
+
+        getName(){
+            return  `My name is ${this.name}`
+        }
+
+        static getJob(){
+            return `My job is ${this.job}`
+        }
+    }
+
+    let userOne = new Person('sithu','programmer')
+
+    // Person.getJob()
+
+    class Customer extends Person  {
+        constructor(name,job,gender){
+            super(name,job)
+            this.gender = gender
+        }
+
+        greeting(){
+            return "hello"
+        }
+    }
+
+    let customerOne = new Customer('kyaw kyaw ','doctor','male');
+
+    console.log(customerOne);
+
+
+    
+</script>
+</html>
