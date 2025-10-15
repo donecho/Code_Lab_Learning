@@ -1,0 +1,32 @@
+
+
+Bootstrap / Tailwind (design framework)
+
+HTML / CSS 
+Component Base ( ready made ) 
+HTML , CSS + Bootstrap 
+
+Installation
+
+NPM -> node package manager ( node js )
+
+npm --version ||| npm -v
+
+i install 
+
+npm i bootstrap 
+
+Mac Linux Ubantu 
+
+ls -> current location folder 
+
+cd location
+
+cd .. 
+
+npm init -y 
+
+Permission -> sudo chmod -R 777 folderName
+
+npm install bootstrap fontawesome 
+npm uninstall bootstrap fontawesome 

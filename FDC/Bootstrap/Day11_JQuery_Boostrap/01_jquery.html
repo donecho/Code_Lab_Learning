@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header" class="head">This is heading</h1>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Hide</button>
+
+    <h2>THis is Testing Message</h2>
+
+    <input type="text" id="userName">
+    <button id="btnCreate">Create</button>
+</body>
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#hideBtn").click(function(){
+            $("h2").hide(1000)
+        })
+
+        $("#showBtn").click(function(){
+            $("h2").show(1000)
+        })
+
+        // innerHTML | html() // Get
+        // innerHTML = "" | html("") // Set
+
+        // innerText | text() // Get
+        // innerText = "" | text("") // Set
+
+        // .value | val() // Get
+        // .value = "" | val("") // Set
+
+        $("#btnCreate").click(function(){
+            $("#userName").val("code lab")
+            // $("h2").html($("#userName").val())
+        })
+
+        // jquery code 
+
+        let head = document.getElementById("header") // js 
+
+        // head.addEventListener('click',function(){
+        //     head.innerHTML = "Code Lab"
+        // })
+
+        $("#header").click(function(){
+            $("#header").html("<h1>Code Lab</h1>")
+        })
+
+        try{
+            $.ajax({
+                url : 'https://fakestoreapi.com/products' , 
+                type : 'get' ,
+                success : function (response){
+                    console.log(response);
+                }
+            })
+        }catch(e){
+            console.log("error => " , e);
+        }
+
+        // $.ajax({
+        //         type : 'get' ,
+        //         url : 'remove/cart' ,
+        //         data : $deleteData ,
+        //         header : { name : 'mgmg'},
+        //         dataType : 'json' ,
+        //         success : function(response){
+        //             if(response.message == 'success'){
+        //                 location.reload();
+        //             }
+        //         }
+        //     });
+
+
+
+        // Selector 
+
+        // Event 
+
+        // Getter Setter 
+
+        // Class put | remove 
+
+        // API || DOM
+        
+
+        
+
+
+    })
+</script>
+</html>

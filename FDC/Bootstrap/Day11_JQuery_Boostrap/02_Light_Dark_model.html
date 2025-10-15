@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="container">
+        <div>
+            <h1>Hello Light | Dark Mode</h1>
+            <h2>Light Mode</h2>
+            <button>OFF</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+
+        $("button").click(function(){
+            if($("body").hasClass("dark")){
+                $("body").removeClass("dark")
+                $("button").html("ON")
+                $("h1").html("WELCOME FROM LIGHT MODE")
+            }else{
+                $("body").addClass("dark")
+                $("button").html("OFF")
+                $("h1").html("<h4 class='red'>WELCOME FROM DARK MODE</h4>")
+            }
+        })
+
+        // FrontEnd  + Backend + Database + API (optional) + Server Deployment
+
+        // Tech Stack 
+
+        // Vue JS + Laravel + mySql + API 
+        // React JS + Laravel + mySql + API 
+
+        // Angular + NodeJS + MongoDB + Express + API ( MEAN Stack )
+        // React  + NodeJS + MongoDB + Express + API ( MERN Stack )
+
+        // React + NextJS
+
+    })
+</script>
+</html>
