@@ -1,0 +1,27 @@
+Requirement Septup 
+
+1 . Browser 
+2 . Editor 
+3 . PHP 
+4 . Apache 
+5 . MySql 
+
+C > XAMPP > Contorl Panel 
+
+export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php8.2.0/bin:$PATH
+
+Permssion -> sudo chmod -R 777 projectFolder
+
+localhost => 127.0.0.1
+
+localhost => C > Xampp > htdocs || Applications > MAMP > htdocs 
+
+localhost/phpmyadmin
+
+Window + R -> cmd php --version
+
+XAMPP WAMP MAMP Laragon
+
+htdocs > fdc_22 > testing.php 
+
+localhost/fdc_22/testing.php (1st way)
