@@ -1,0 +1,75 @@
+
+Database ?
+
+
+localhost/phpmyadmin
+
+localhost:8888/phpmyadmin
+
+
+Database > Table > Data ( row )
+
+Talbe -> id (unique) -> primary key 
+
+CRUD -> basic 
+
+Create Read Update Delete 
+
+Create -> Insert into value -> Insert Into table_name (fieldName) values (value)
+
+Read -> Select * From Where -> Select * From table_name where condicion 
+
+Delete -> Delete from where -> delete from table_name where condition
+
+Update -> Update set where -> Update table_name set field=value , field=value where condiction
+
+order by -> string ( AZ ) -> number (0-9) -> time (created_date)
+
+as -> change name 
+
+limit -> pagination 
+
+min , max , sum , count , avg 
+
+group by (count)
+
+Like -> data search ( % searchData % )
+
+Database Relation 
+=================
+
+Inner Join 
+
+Left Join A -> B => A || B -> A => B
+
+Right Join , A -> B => B || B -> C => C
+
+Full Join ,
+
+Relation 
+========
+
+One to One 
+
+One to Many 
+
+Many to Many
+
+
+
+
+User 
+====
+id          name 
+1           sithu 
+2           kyaw kyaw
+
+User Details 
+============
+
+id      user_id         NRC 
+1       1               7/pamana
+2       2               9/
+
+
+

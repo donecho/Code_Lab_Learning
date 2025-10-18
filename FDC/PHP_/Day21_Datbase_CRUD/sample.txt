@@ -1,0 +1,27 @@
+
+
+Database ?
+
+
+localhost/phpmyadmin
+
+localhost:8888/phpmyadmin
+
+
+Database > Table > Data ( row )
+
+Talbe -> id (unique) -> primary key 
+
+CRUD -> basic 
+
+Create Read Update Delete 
+
+Create -> Insert into value -> Insert Into table_name (fieldName) values (value)
+
+Read -> Select * From Where -> Select * From table_name 
+
+Delete -> Delete from where -> delete from table_name where condition
+
+Update -> Update set where -> Update table_name set field=value , field=value where condiction
+
+
